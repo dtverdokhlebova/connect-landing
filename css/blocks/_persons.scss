@@ -1,0 +1,16 @@
+.persons {
+  display: flex;
+  &__item {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    &:not(:first-child) {
+      margin-left: -15px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

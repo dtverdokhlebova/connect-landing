@@ -1,0 +1,35 @@
+.companies {
+  display: flex;
+  gap: 40px;
+  @include media-laptop {
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 15px;
+    font: 600 15px/1.5 $fontMs;
+    @include media-mobile {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__item {
+    padding: 10px 24px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 15px 20px 0 rgba(24, 30, 82, 0.149);
+    @include media-mobile {
+      padding: 8px 18px;
+    }
+    img {
+      height: 30px;
+      @include media-mobile {
+        height: 20px;
+      }
+    }
+  }
+}
