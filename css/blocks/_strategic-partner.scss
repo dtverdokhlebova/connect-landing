@@ -1,0 +1,66 @@
+.strategic-partner {
+  padding: 54px 106px 45px;
+  border: 1px solid #c5ccd9;
+  background: url('/img/strategic-partner-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media-laptop {
+    padding: 50px 40px;
+  }
+  @include media-mobile {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  &__logo {
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 15px 30px;
+    background: #fff;
+    border-radius: 100px;
+    box-shadow: 0 15px 20px 0 rgba(24, 30, 82, 0.149);
+    @include media-mobile {
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    img {
+      max-height: 50px;
+      @include media-laptop {
+        max-height: 40px;
+      }
+      @include media-mobile {
+        max-height: 28px;
+      }
+    }
+  }
+  &__content {
+    padding: 30px 20px 40px;
+    background: #fff;
+    @include media-mobile {
+      padding: 0;
+      background: transparent;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+    font: 600 30px/1.35 $fontMs;
+    @include media-laptop {
+      font-size: 24px;
+    }
+    @include media-mobile {
+      font-size: 20px;
+    }
+  }
+  &__descr {
+    font: 18px/1.6 $fontOs;
+    color: $black60;
+    @include media-mobile {
+      font-size: 16px;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
