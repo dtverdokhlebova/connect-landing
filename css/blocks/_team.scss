@@ -1,0 +1,106 @@
+.team {
+  --team-accent: #36a2df;
+  > * {
+    &:nth-child(2) {
+      --team-accent: #1ba64f;
+    }
+    &:nth-child(3),
+    &:nth-child(5) {
+      --team-accent: #e54724;
+    }
+    &:nth-child(4) {
+      --team-accent: #ff9922;
+    }
+  }
+  &__item {
+    height: 100%;
+    padding: 30px 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px 0px rgba(24, 30, 82, 0.149);
+    @include media-mobile {
+      padding: 25px 25px 20px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $greyVeryLight;
+    @include media-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding-bottom: 16px;
+    }
+  }
+  &__info {
+    font-weight: 600;
+    font-family: $fontMs;
+  }
+  &__photo {
+    position: relative;
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    @include media-tablet {
+      width: 80px;
+      height: 80px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 40px;
+      height: 10px;
+      border-radius: 20px;
+      background: var(--team-accent);
+      @include media-tablet {
+        width: 24px;
+        height: 6px;
+      }
+    }
+  }
+  &__name {
+    margin-bottom: 4px;
+    font-size: 20px;
+    @include media-tablet {
+      font-size: 18px;
+    }
+    @include media-mobile {
+      font-size: 16px;
+    }
+  }
+  &__post {
+    font-size: 15px;
+    color: #36A2DF;
+    @include media-tablet {
+      font-size: 14px;
+    }
+  }
+  &__main {
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    @include media-tablet {
+      font-size: 14px;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+        @include media-tablet {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

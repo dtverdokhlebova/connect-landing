@@ -1,0 +1,53 @@
+.l-projects {
+  &__item {
+    position: relative;
+    height: 100%;
+    padding: 35px 40px 25px;
+    font-family: $fontRbt;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px 0px rgba(24, 30, 82, 0.149);
+    @include media-tablet {
+      padding: 30px 25px 20px;
+      font-size: 16px;
+    }
+  }
+  &__years {
+    position: absolute;
+    top: 26px;
+    right: 35px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #8c95a6;
+    @include media-tablet {
+      top: 24px;
+      right: 25px;
+    }
+  }
+  &__logo {
+    height: 50px;
+    margin-bottom: 20px;
+    @include media-tablet {
+      height: 40px;
+    }
+    @include media-mobile {
+      height: 36px;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__title {
+    padding-right: 50px;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 14px;
+    color: #686d7c;
+  }
+}

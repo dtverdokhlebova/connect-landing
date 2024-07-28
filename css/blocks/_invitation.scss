@@ -58,7 +58,8 @@
   }
   &--play {
     .invitation {
-      &__img {
+      &__img,
+      &__button {
         opacity: 0;
       }
       &__video {

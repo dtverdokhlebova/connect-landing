@@ -1,0 +1,105 @@
+.reputation {
+  &__slide {
+    margin-right: 20px;
+    margin-left: 20px;
+    @include media-tablet {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    &.slick-center {
+      .reputation__text {
+        display: block;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 35px;
+    padding: 40px 0 30px;
+    font-weight: 400;
+    color: $grey;
+    box-shadow: 0 15px 20px rgba(24, 30, 82, 0.149);
+    border-radius: 10px;
+    background: #fff;
+    @include media-laptop {
+      font-size: 16px;
+    }
+    @include media-tablet {
+      padding: 40px 0 20px;
+      font-size: 14px;
+    }
+  }
+  &__img {
+    padding-bottom: 10px;
+    img {
+      display: block;
+      max-height: 60px;
+      margin: 0 auto;
+      @include media-laptop {
+        max-height: 50px;
+      }
+      @include media-tablet {
+        max-height: 40px;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    display: none;
+    padding: 40px 30px 0 40px;
+    @include media-tablet {
+      padding-right: 20px;
+      padding-left: 25px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+    }
+    &::before {
+      top: 28px;
+      right: 40px;
+      left: 40px;
+      height: 1px;
+      background: $greyVeryLight;
+      @include media-tablet {
+        right: 30px;
+        left: 30px;
+      }
+    }
+    &::after {
+      top: 44px;
+      bottom: 6px;
+      left: 20px;
+      width: 3px;
+      background: #36a2df;
+      @include media-tablet {
+        left: 12px;
+        width: 2px;
+      }
+    }
+  }
+  &__arrows {
+    .slick-arrow {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $grey;
+      border-radius: 5px;
+      font-size: 24px;
+      width: 60px;
+      height: 60px;
+      color: $grey;
+      cursor: pointer;
+      @include media-tablet {
+        width: 45px;
+        height: 45px;
+      }
+      &:not(:first-child) {
+        margin-left: 20px;
+        @include media-tablet {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

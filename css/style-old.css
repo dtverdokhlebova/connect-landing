@@ -385,3 +385,94 @@ h2.white {
   background-color: #454545;
   color: #d3d3d3
 }
+
+.h3,
+h3 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+}
+
+.dark-bg {
+  background-color: #2e2f33;
+  background-image: url('../img/local/callback_br.png');
+  background-size: 40%;
+  background-position: 100% 20%;
+}
+
+.callback {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.callback {
+  background-color: #2e2f33;
+  background-image: url('../img/local/callback_br.png');
+  background-position: 100% 0;
+}
+
+.callback img.callback-img {
+  background-color: rgba(255,255,255,.1);
+  padding: 50px;
+  border-radius: 100px
+}
+
+.callback .text {
+  font-family: "Montserrat",sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  padding-right: 40px;
+  font-weight: 700
+}
+
+.callback .dop_text {
+  padding-top: 10px;
+  font-family: Open Sans;
+  font-size: 18px;
+  color: #fff
+}
+
+@media (max-width: 575.98px) {
+  .callback .text {
+    font-size:1.1rem
+  }
+
+  .callback img.callback-img {
+    padding: 25px;
+    margin-bottom: 20px
+  }
+}
+
+#deviz {
+  font-weight: 700
+}
+
+#deviz .title {
+  font-family: Open Sans;
+  font-size: .8rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: #f92
+}
+
+#deviz .text,#team .team-item .team-text .name {
+  font-family: "Montserrat",sans-serif;
+  font-size: 2.5rem;
+  color: #fff
+}
+
+@media (max-width: 575.98px) {
+  #deviz {
+    text-align: center
+  }
+
+  #deviz .text {
+    font-size: 1.2rem;
+  }
+}
+
+.py-6 {
+  padding-top: 6rem!important;
+  padding-bottom: 6rem!important
+}

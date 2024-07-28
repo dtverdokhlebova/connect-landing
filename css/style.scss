@@ -10,6 +10,9 @@
     @include media-mobile {
       margin-bottom: 15px;
     }
+    &--mb0 {
+      margin-bottom: 0;
+    }
   }
   &__title {
     margin-bottom: 10px;
@@ -34,6 +37,9 @@
       max-width: 1160px;
       margin: 0 auto;
     }
+    &--max-w-950 {
+      max-width: 950px;
+    }
     &--max-w-xs {
       max-width: 420px;
       margin: 0 auto;
@@ -41,6 +47,21 @@
   }
 }
 
+.grey {
+  color: rgba(255, 255, 255, 0.6);
+}
+.bg-dots {
+  background-image: url('../img/dots.png'), url('../img/dots.png');
+  background-size: 50%;
+  background-position: -20% 65%, right 25%;
+  background-repeat: no-repeat;
+}
+.bg-dots-3 {
+  background-image: url('../img/dots.png'), url('../img/dots.png'), url('../img/dots.png');
+  background-size: 50%;
+  background-position: -20% 16%, right 65%, -20% 95%;
+  background-repeat: no-repeat;
+}
 .btn.btn-py-l {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
@@ -55,3 +76,10 @@
 @import 'blocks/invitation';
 @import 'blocks/speakers';
 @import 'blocks/strategic-partner';
+@import 'blocks/banner-about';
+@import 'blocks/history';
+@import 'blocks/l-projects';
+@import 'blocks/our-products';
+@import 'blocks/reputation';
+@import 'blocks/specialization';
+@import 'blocks/team';

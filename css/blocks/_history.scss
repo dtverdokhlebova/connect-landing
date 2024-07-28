@@ -1,0 +1,187 @@
+.history {
+  --history-item-pd: 118px;
+  --history-main-border-radius: 10px;
+  --history-line-top: 48px;
+  --history-year-space: 40px;
+  @include media-laptop {
+    --history-item-pd: 60px;
+  }
+  @include media-tablet {
+    --history-item-pd: 0;
+  }
+
+  position: relative;
+  &__main-line {
+    position: absolute;
+    top: var(--history-line-top);
+    bottom: 8px;
+    left: 50%;
+    width: 2px;
+    background: #c4c4c4;
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &__container {
+    display: grid;
+    gap: 40px;
+    @include media-tablet {
+      gap: 20px;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @include media-tablet {
+      display: block;
+    }
+    &:nth-child(4n + 1) {
+      --history-accent: #36a2df;
+    }
+    &:nth-child(4n + 2) {
+      --history-accent: #1ba64f;
+    }
+    &:nth-child(4n + 3) {
+      --history-accent: #e54724;
+    }
+    &:nth-child(4n) {
+      --history-accent: #ff9922;
+    }
+    &:nth-child(2n) {
+      .history__item {
+        margin-left: auto;
+        padding-right: var(--history-item-pd);
+      }
+      .history__year {
+        left: calc(100% + var(--history-year-space));
+      }
+      .history__line {
+        right: 0;
+        &::before {
+          right: -6px;
+        }
+      }
+      .history__main {
+        border-right-width: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        @include media-tablet {
+          border-width: 0 0 0 3px;
+          border-radius: 0 var(--history-main-border-radius) var(--history-main-border-radius) 0;
+        }
+      }
+    }
+    &:nth-child(2n+1) {
+      .history__item {
+        grid-column-start: 2;
+        padding-left: var(--history-item-pd);
+      }
+      .history__year {
+        right: calc(100% + var(--history-year-space));
+      }
+      .history__line {
+        left: 0;
+        right: -100%;
+        &::before {
+          left: -4px;
+        }
+      }
+      .history__main {
+        border-left-width: 3px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    width: fit-content;
+    font-weight: 600;
+    font-family: $fontMs;
+    @include media-tablet {
+      width: auto;
+    }
+  }
+  &__year {
+    position: absolute;
+    top: 22px;
+    padding: 10px 13px;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--history-accent);
+    border: 2px solid var(--history-accent);
+    border-radius: 10px;
+    @include media-tablet {
+      position: static;
+      padding: 0;
+      font-size: 22px;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+  &__line {
+    position: absolute;
+    top: var(--history-line-top);
+    width: var(--history-item-pd);
+    height: 2px;
+    background: var(--history-accent);
+    @include media-tablet {
+      display: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: inherit;
+    }
+  }
+  &__main {
+    max-width: 526px;
+    padding: 25px 30px 28px;
+    background: #fff;
+    box-shadow: 0px 15px 20px 0px rgba(24, 30, 82, 0.149);
+    border-radius: var(--history-main-border-radius);
+    border: 0 solid var(--history-accent);
+    @include media-tablet {
+      max-width: unset;
+      padding: 25px;
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 1.2;
+    color: var(--history-accent);
+    @include media-laptop {
+      font-size: 22px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    @include media-laptop {
+      font-size: 14px;
+    }
+    @include media-tablet {
+      margin-bottom: 10px;
+    }
+  }
+  &__to-be {
+    grid-column-start: 2;
+    margin-top: 80px;
+    padding-left: var(--history-year-space);
+    font-size: 25px;
+    line-height: 1.2;
+    color: #c4c4c4;
+    @include media-laptop {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    @include media-tablet {
+      padding-left: 0;
+      text-align: right;
+    }
+  }
+}
